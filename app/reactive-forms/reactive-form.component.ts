@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   moduleId: module.id,
@@ -10,6 +10,7 @@ import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 
 
 export class ReactiveFormComponent {
+
 	form = new FormGroup ({
 		first: new FormControl(),
 		last: new FormControl(),
@@ -17,5 +18,15 @@ export class ReactiveFormComponent {
 		password: new FormControl(),
 		confirm: new FormControl()
 	});
+  // form: FormGroup;
+  // constructor(private _fb: FormBuilder) {
+  //   this.form = this._fb.group({
+  //     first: 'kjnkjn',
+  //     last: '',
+  //     username: '',
+  //     password: '',
+  //     confirm: ''
+  //   });
+  }
 }
 
