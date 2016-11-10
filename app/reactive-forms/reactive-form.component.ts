@@ -11,11 +11,11 @@ import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 
 export class ReactiveFormComponent {
 	form = new FormGroup ({
-		first: new FormControl();
-		last: new FormControl();
-		username: new FormControl();
-		password: new FormControl();
-		confirm: new FormControl();
+		first: new FormControl(),
+		last: new FormControl(),
+		username: new FormControl(),
+		password: new FormControl(),
+		confirm: new FormControl()
 	});
 }
 
