@@ -11,22 +11,28 @@ import { AbstractControl, FormControl, FormGroup, FormBuilder } from '@angular/f
 
 export class ReactiveFormComponent {
 
-	form = new FormGroup ({
-		first: new FormControl(),
-		last: new FormControl(),
-		username: new FormControl(),
-		password: new FormControl(),
-		confirm: new FormControl()
-	});
-  // form: FormGroup;
-  // constructor(private _fb: FormBuilder) {
-  //   this.form = this._fb.group({
-  //     first: 'kjnkjn',
-  //     last: '',
-  //     username: '',
-  //     password: '',
-  //     confirm: ''
-  //   });
+	// form = new FormGroup ({
+	// 	first: new FormControl(),
+	// 	last: new FormControl(),
+	// 	username: new FormControl(),
+	// 	password: new FormControl(),
+	// 	confirm: new FormControl()
+	// });
+  form: FormGroup;
+  constructor(private _fb: FormBuilder) {
+    this.form = this._fb.group({
+      first: '',
+      last: '',
+      username: '',
+      password: '',
+      confirm: '',
+      address: this._fb.group({
+	      street: '',
+	      city: '',
+	      state: '',
+	      zip: ''
+      })
+    });
   }
 }
 
