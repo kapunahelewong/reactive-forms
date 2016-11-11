@@ -45,4 +45,6 @@
     <p>Form: {{ form.value | json }}</p>
     <p>First Name FormControl value: {{ form.get('first').value}}</p>
     <p>Street value: {{ form.get('address.street').value}}</p>
+    <p>Form status: {{ form.status }}</p>
+    <p>Password status: {{ form.get('password').status}}</p>
 

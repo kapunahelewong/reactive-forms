@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   moduleId: module.id,
@@ -17,27 +17,14 @@ export class ReactiveFormComponent {
       first: '',
       last: '',
       username: '',
-      password: '',
-      confirm: '',
+      password: ['', Validators.required],
+      confirm: ['', Validators.required],
       address: this._fb.group({
 	      street: '',
 	      city: '',
 	      state: '',
 	      zip: ''
       })
-    });
-    this.form.setValue({
-      first: 'Nancy',
-      last: 'Drew',
-      username: 'NancyD',
-      password: '',
-      confirm: '',
-      address: {
-      	street: '123 Fake Street',
-      	city: 'San Francisco',
-      	state: 'CA',
-      	zip:'12345'
-      }
     });
   }
 }
