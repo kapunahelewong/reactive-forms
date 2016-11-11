@@ -11,13 +11,6 @@ import { AbstractControl, FormControl, FormGroup, FormBuilder } from '@angular/f
 
 export class ReactiveFormComponent {
 
-	// form = new FormGroup ({
-	// 	first: new FormControl(),
-	// 	last: new FormControl(),
-	// 	username: new FormControl(),
-	// 	password: new FormControl(),
-	// 	confirm: new FormControl()
-	// });
   form: FormGroup;
   constructor(private _fb: FormBuilder) {
     this.form = this._fb.group({
@@ -32,6 +25,10 @@ export class ReactiveFormComponent {
 	      state: '',
 	      zip: ''
       })
+    });
+    this.form.patchValue({
+      first: 'Nancy',
+      last: 'Drew'
     });
   }
 }

@@ -42,8 +42,9 @@
         </div>
       </div>
     </form>
-      <p>Form: {{ form.value | json }}</p>
-        <p>Form Control value: {{ form.get('first').value}}</p>
+    <p>Form: {{ form.value | json }}</p>
+    <p>First Name FormControl value: {{ form.get('first').value}}</p>
+    <p>Street value: {{ form.get('address.street').value}}</p>
 
   <!-- <form novalidate [formGroup]="form">
     <input formControlName="first" placeholder="First name">
