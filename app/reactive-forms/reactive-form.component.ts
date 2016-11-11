@@ -26,9 +26,18 @@ export class ReactiveFormComponent {
 	      zip: ''
       })
     });
-    this.form.patchValue({
+    this.form.setValue({
       first: 'Nancy',
-      last: 'Drew'
+      last: 'Drew',
+      username: 'NancyD',
+      password: '',
+      confirm: '',
+      address: {
+      	street: '123 Fake Street',
+      	city: 'San Francisco',
+      	state: 'CA',
+      	zip:'12345'
+      }
     });
   }
 }
