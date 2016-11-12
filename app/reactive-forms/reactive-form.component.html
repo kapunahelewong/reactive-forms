@@ -1,3 +1,4 @@
+<div class="wrapper">
 <h2>My Reactive Form</h2>
   <form novalidate [formGroup]="form">
     <div class="form-group">
@@ -23,8 +24,9 @@
         </div>
       </div>
 
-      <div formArrayName="addresses">
+      <div formArrayName="addresses" class="addresses">
         <div *ngFor="let address of addresses.controls; let i=index" [formGroupName]="i">
+          <h3>Address</h3>
           <div class="form-group">
             <label>Street:</label>
             <input class="form-control" formControlName="street">
@@ -51,8 +53,8 @@
     </form>
     <p>Form: {{ form.value | json }}</p>
     <p>First Name FormControl value: {{ form.get('first').value}}</p>
-<!--     <p>Street value: {{ form.get('address.street').value}}</p> -->
     <p>Form status: {{ form.status }}</p>
     <p>Password status: {{ form.get('account.password').status}}</p>
     <p>Account status: {{ form.get('account').errors | json }}</p>
 
+</div>
