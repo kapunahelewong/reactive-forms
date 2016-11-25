@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { ReactiveFormComponent } from './reactive-forms/reactive-form.component';
+import { ReactiveFormComponent } from './reactive-form.component';
 
 @NgModule({
   imports:      [

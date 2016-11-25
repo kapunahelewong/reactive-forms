@@ -1,13 +1,9 @@
 <div class="wrapper">
-<h2>My Reactive Form</h2>
+<h2>Hero Form</h2>
   <form novalidate [formGroup]="form">
-    <div class="form-group">
-        <label>First Name:</label>
-        <input class="form-control" formControlName="first">
-      </div>
       <div class="form-group">
-        <label>Last Name:</label>
-        <input class="form-control" formControlName="last">
+        <label>Name:</label>
+        <input class="form-control" formControlName="name">
       </div>
       <div formGroupName="account">
         <div class="form-group">
@@ -26,7 +22,7 @@
 
       <div formArrayName="addresses" class="addresses">
         <div *ngFor="let address of addresses.controls; let i=index" [formGroupName]="i">
-          <h3>Address</h3>
+          <h3>Fortress of Solitude</h3>
           <div class="form-group">
             <label>Street:</label>
             <input class="form-control" formControlName="street">
@@ -47,12 +43,12 @@
             <input class="form-control" formControlName="zip">
           </div>
         </div>
-        <button (click)="add()">Add Address</button>
+        <button (click)="add()">Add Another Secret Lair</button>
       </div>
 
     </form>
     <p>Form: {{ form.value | json }}</p>
-    <p>First Name FormControl value: {{ form.get('first').value}}</p>
+    <!-- <p>First Name FormControl value: {{ form.get('first').value}}</p> -->
     <p>Form status: {{ form.status }}</p>
     <p>Password status: {{ form.get('account.password').status}}</p>
     <p>Account status: {{ form.get('account').errors | json }}</p>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReactiveFormComponent } from './reactive-forms/reactive-form.component';
+import { ReactiveFormComponent } from './reactive-form.component';
 
 @Component({
 	moduleId: module.id,

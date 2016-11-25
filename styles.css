@@ -148,7 +148,8 @@ nav a.router-link-active {
 }
 
 .addresses {
-  background-color: #eaeaea;
-  margin: 1rem 0;
-  padding: 1rem;
+  background-color: #fbfbfb;
+  margin: 3rem 0;
+  padding: 2rem;
+  border: 1px solid #ddd;
 }

@@ -20,8 +20,8 @@ export class ReactiveFormComponent {
 
   constructor(private _fb: FormBuilder) {
     this.form = this._fb.group({
-      first: '',
-      last: '',
+      // first: '',
+      name: '',
       account: this._fb.group({
 	      username: '',
 	      password: ['', Validators.required],
